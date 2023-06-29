@@ -10,7 +10,7 @@ import { MessageService } from './message.service';
 export class HeroService {
   getHeroes(): Observable<Hero[]> {
     const heroes = of(HEROES_LIST);
-    this.messageService.add('HeroService: fetched heroes');
+    // this.messageService.add('HeroService: fetched heroes');
     return heroes;
   }
 
@@ -18,7 +18,7 @@ export class HeroService {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.
     const hero = HEROES_LIST.find((h) => h.id === id)!;
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    // this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(hero);
   }
   constructor(private messageService: MessageService) {}
